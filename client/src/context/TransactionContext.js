@@ -32,13 +32,13 @@ const getSmartContract = () => {
 export const TransactionProvider = ({ children }) => {
     
 
-    return (
+  return (
     //ここで囲まれた{children}はTransactionContextで宣言された変数・関数をいつでも呼び出すことができる。
     //どんな変数を渡したいかは「value」で指定することができる。
     //下記のようにすることで、この{{ name: "dd1107" }}プロパティの情報は
     // childrenでいつでも使うことができる
-      <TransactionContext.Provider value={{ name: "dd1107" }}>
-        {children}
-      </TransactionContext.Provider>
-    );
-}
+    <TransactionContext.Provider value={{ name: "dd1107" }}>
+      {children}
+    </TransactionContext.Provider>
+  );
+};
